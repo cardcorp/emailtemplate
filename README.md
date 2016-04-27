@@ -25,12 +25,6 @@ Install the Foundation CLI with this command:
 npm install foundation-cli --global
 ```
 
-Use this command to set up a blank Foundation for Emails project:
-
-```bash
-foundation new --framework emails
-```
-
 The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
 
 ### Manual Setup
@@ -38,7 +32,7 @@ The CLI will prompt you to give your project a name. The template will be downlo
 To manually set up the template, first download it with Git:
 
 ```bash
-git clone https://github.com/zurb/foundation-emails-template projectname
+git clone git@github.com:rmcveigh/emailtemplate.git
 ```
 
 Then open the folder in your command line, and install the needed dependencies:

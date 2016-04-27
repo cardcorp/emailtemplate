@@ -1,5 +1,7 @@
 # Foundation for Emails Template
 
+[![devDependency Status](https://david-dm.org/zurb/foundation-emails-template/dev-status.svg)](https://david-dm.org/zurb/foundation-emails-template#info=devDependencies)
+
 ## Each template is stored in there own branches.
 
 ### For example: If you would like to checkout the Direct Deposit Template simply:
@@ -8,8 +10,6 @@ cd project-directory
 git checkout direct-deposit-template
 npm install
 ```
-
-[![devDependency Status](https://david-dm.org/zurb/foundation-emails-template/dev-status.svg)](https://david-dm.org/zurb/foundation-emails-template#info=devDependencies)
 
 **Please open all issues with this template on the main [Foundation for Emails](http://github.com/zurb/foundation-emails/issues) repo.**
 

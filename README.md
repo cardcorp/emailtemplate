@@ -1,5 +1,14 @@
 # Foundation for Emails Template
 
+## Each template is stored in there own branches.
+
+### For example: If you would like to checkout the Direct Deposit Template simply:
+```bash
+cd project-directory
+git checkout direct-deposit-template
+npm install
+```
+
 [![devDependency Status](https://david-dm.org/zurb/foundation-emails-template/dev-status.svg)](https://david-dm.org/zurb/foundation-emails-template#info=devDependencies)
 
 **Please open all issues with this template on the main [Foundation for Emails](http://github.com/zurb/foundation-emails/issues) repo.**
@@ -25,6 +34,12 @@ Install the Foundation CLI with this command:
 npm install foundation-cli --global
 ```
 
+Use this command to set up a blank Foundation for Emails project:
+
+```bash
+foundation new --framework emails
+```
+
 The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
 
 ### Manual Setup
@@ -32,7 +47,7 @@ The CLI will prompt you to give your project a name. The template will be downlo
 To manually set up the template, first download it with Git:
 
 ```bash
-git clone git@github.com:rmcveigh/emailtemplate.git
+git clone https://github.com/zurb/foundation-emails-template projectname
 ```
 
 Then open the folder in your command line, and install the needed dependencies:

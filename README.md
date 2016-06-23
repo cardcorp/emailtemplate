@@ -15,8 +15,8 @@ Foundation for Emails 2 is not yet fully released, so for now, the main way to g
 To set up the emails template, run these commands:
 
 ```bash
-git clone https://github.com/zurb/foundation-emails-template project
-cd project
+git clone https://github.com/cardcorp/emailtemplate
+cd emailtemplate
 npm install
 ```
 

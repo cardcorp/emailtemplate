@@ -1,0 +1,100 @@
+/**
+ * @file
+ * Styles for the direct deposit form.
+ */
+.header-region {
+  .first img {
+    width: 50%;
+    height: auto;
+  }
+
+  .last img {
+    max-width: 40%;
+    height: auto;
+  }
+
+  .columns {
+    vertical-align: middle;
+    padding-top: 16px;
+  }
+}
+
+th.header-column {
+  padding-bottom: 4px;
+}
+
+table.callout {
+  margin-bottom: 6px;
+}
+
+.step-num {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: $h5-font-size;
+  margin-right: 2px;
+}
+
+.section-title {
+  color: $primary-color;
+}
+
+.account-info th {
+  padding: 2px 6px;
+}
+
+.border-row {
+  border: 1px solid $primary-color;
+
+  &.top-border {
+    border-bottom: 0;
+
+    th {
+      padding-top: 4px;
+    }
+  }
+
+  &.bottom-border {
+    border-top: 0;
+
+    th {
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.border-top {
+  th {
+    border-top: 1px solid $black;
+    padding-top: 6px;
+  }
+
+  &.first {
+    padding-right: 0;
+  }
+
+  &.last {
+    padding-left: 0;
+  }
+}
+
+.checkboxes img {
+  width: 55%;
+  height: auto;
+}
+
+.check-number th {
+  text-align: center;
+  font-size: 90%;
+}
+
+.check-numbers--wrapper {
+  margin-top: -12px;
+
+  .first {
+    width: 16px;
+  }
+}
+
+.signature-wrapper {
+  margin-top: 1.5em;
+}

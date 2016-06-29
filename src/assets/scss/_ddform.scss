@@ -8,11 +8,15 @@
     height: auto;
   }
 
-  .last img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  .last {
+    padding-bottom: 8px;
+    
+    img {
+      max-width: 25%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    }
   }
 
   .columns {
@@ -22,11 +26,19 @@
 }
 
 th.header-column {
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 table.callout {
-  margin-bottom: 6px;
+  margin-bottom: 0;
+}
+
+.step {
+  margin-right: 2em;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .step-num {
@@ -64,7 +76,9 @@ table.callout {
   }
 }
 
-.border-top {
+th.border-top {
+  padding-bottom: 8px;
+
   th {
     border-top: 1px solid $black;
     padding-top: 6px;
@@ -84,17 +98,28 @@ table.callout {
   height: auto;
 }
 
-.check-number th {
-  text-align: center;
-  font-size: 90%;
-}
-
 .check-numbers--wrapper {
   margin-top: -12px;
 
   .first {
-    width: 16px;
+    padding: 0;
+    margin: 0;
+    width: 17px;
   }
+}
+
+th.check-number {
+  padding: 0 0 8px;
+  width: 92px;
+
+  th {
+    text-align: center;
+    font-size: 85%;
+  }
+}
+
+.check-img {
+  max-width: 80%;
 }
 
 .signature-wrapper {

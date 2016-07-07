@@ -10,7 +10,7 @@
 
   .last {
     padding-bottom: 8px;
-    
+
     img {
       max-width: 25%;
       height: auto;
@@ -31,14 +31,6 @@ th.header-column {
 
 table.callout {
   margin-bottom: 0;
-}
-
-.step {
-  margin-right: 2em;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .step-num {
@@ -124,4 +116,16 @@ th.check-number {
 
 .signature-wrapper {
   margin-top: 1.5em;
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+  img.check-img {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+  }
+
+  th.columns.check-number {
+    padding-left: 24px !important;
+}
 }

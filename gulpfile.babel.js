@@ -76,7 +76,7 @@ function sass() {
 
 // Copy and compress images
 function images() {
-  return gulp.src('src/assets/img/*')
+  return gulp.src('src/assets/img/**/*')
     .pipe($.imagemin())
     .pipe(gulp.dest('./dist/assets/img'));
 }
@@ -98,10 +98,10 @@ function server(done) {
 
 // Watch for file changes
 function watch() {
-  gulp.watch('src/pages/**/*.html', gulp.series(pages, inline, browser.reload));
-  gulp.watch(['src/layouts/**/*', 'src/partials/**/*'], gulp.series(resetPages, pages, inline, browser.reload));
-  gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss'], gulp.series(sass, pages, inline, browser.reload));
-  gulp.watch('src/assets/img/**/*', gulp.series(images, browser.reload));
+  gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, inline, browser.reload));
+  gulp.watch(['src/layouts/**/*', 'src/partials/**/*']).on('change', gulp.series(resetPages, pages, inline, browser.reload));
+  gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('change', gulp.series(resetPages, sass, pages, inline, browser.reload));
+  gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
 }
 
 // Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
@@ -111,7 +111,9 @@ function inliner(css) {
 
   var pipe = lazypipe()
     .pipe($.inlineCss, {
-      applyStyleTags: false
+      applyStyleTags: false,
+      removeStyleTags: false,
+      removeLinkTags: false
     })
     .pipe($.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
     .pipe($.htmlmin, {
@@ -203,5 +205,3 @@ function zip() {
 
   return merge(moveTasks);
 }
-
-
